@@ -7,6 +7,9 @@ import android.util.Log;
 
 /**
  * Created by namlu on 07-Sep-16.
+ *
+ * MySQLiteHelper.java is responsible for creating and upgrading the database.
+ * It also defines several constraints for table name and table columns
  */
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
@@ -27,11 +30,13 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    // onCreate will create a new database
     @Override
     public void onCreate(SQLiteDatabase database) {
         database.execSQL(DATABASE_CREATE);
     }
 
+    // onUpgrade() will delete all existing data and create a new database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.w(MySQLiteHelper.class.getName(), "Upgrading database version from" +

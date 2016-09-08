@@ -3,7 +3,8 @@ package com.namclu.android.testdatabaseactivity;
 /**
  * Created by namlu on 07-Sep-16.
  *
- * Comment.java class is our model and contains the data we will save in the database and show in the user interface
+ * Comment.java class is our model and contains the data we will save in the database and
+ * show in the user interface
  */
 public class Comment {
 
